@@ -17,7 +17,7 @@ public class TestBase {
 
   @BeforeAll
   static void setupConfig() {
-    Configuration.baseUrl = "https://www.nspk.ru/";
+    Configuration.baseUrl = System.getProperty("baseUrl", "https://www.nspk.ru/");
     Configuration.browser = System.getProperty("browser", "chrome");
     Configuration.browserSize = System.getProperty("windowSize", "1920x1080");
     Configuration.browserVersion = System.getProperty("version", "128");
