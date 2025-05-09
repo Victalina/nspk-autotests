@@ -24,7 +24,8 @@ public class NspkTests extends TestBase {
   @Test
   @DisplayName("Проверка пунктов основного меню на главной странице")
   void checkHeaderMenuOnMainPageTest() {
-    String[] headerMenuItems = new String[]{"О компании", "Платежная система «Мир»", "Банкам", "Центр знаний", "Вакансии", "Пресс-центр", "Контакты"};
+    String[] headerMenuItems = new String[]{"О компании", "Платежная система «Мир»", "Банкам", "Центр знаний",
+            "Вакансии", "Пресс-центр", "Контакты"};
     mainPage.openMainPage()
             .checkHeaderMenuItems(headerMenuItems);
   }
@@ -33,7 +34,10 @@ public class NspkTests extends TestBase {
   @DisplayName("Проверка подпунктов меню пункта 'О компании' на главной странице")
   void checkSubmenuItemsOfAboutItemMenuOnMainPageTest() {
     String headerMenuItem = "О компании";
-    String[] subMenuItems = new String[]{"Компания АО «НСПК»", "Обработка персональных данных", "Оценка условий труда на рабочих местах", "Официальные сайты", "Акционерам и инвесторам", "Устойчивое развитие", "Противодействие коррупции", "Соответствие PCI DSS", "Деятельность в области информационных технологий", "Реквизиты"};
+    String[] subMenuItems = new String[]{"Компания АО «НСПК»", "Обработка персональных данных",
+            "Оценка условий труда на рабочих местах", "Официальные сайты", "Акционерам и инвесторам",
+            "Устойчивое развитие", "Противодействие коррупции", "Соответствие PCI DSS",
+            "Деятельность в области информационных технологий", "Реквизиты"};
     mainPage.openMainPage()
             .checkSubMenuItems(headerMenuItem, subMenuItems);
   }
